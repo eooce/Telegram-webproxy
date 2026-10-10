@@ -1,0 +1,19 @@
+{
+  "name": "TG-Webproxy",
+  "version": "1.0.0",
+  "description": "TG-Webproxy",
+  "main": "index.js",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ws": "latest"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
+  
+
