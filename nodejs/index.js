@@ -9,8 +9,8 @@ const { WebSocketServer, WebSocket } = require('ws');
 // ==================== 环境变量 ====================
 // SECRET支持两种写法 422decd7-cc2a-4b86-8a91-c341ecc92045 和 422decd7cc2a4b868a91c341ecc92045都支持：32位hex或标准UUID
 const SECRET = normalizeSecret(process.env.UUID || process.env.SECRET || '422decd7-cc2a-4b86-8a91-c341ecc92045');
-const PORT   = parseInt(process.env.SERVER_PORT || process.env.PORT || '3000', 10);
-const DOMAIN = (process.env.DOMAIN || 'webproxy.eooce.art').trim();
+const PORT   = parseInt(process.env.SERVER_PORT || process.env.PORT || '3000', 10); // 监听端口,回源时使用的
+const DOMAIN = (process.env.DOMAIN || 'webproxy.eooce.art').trim(); // Origrin Rules回源后的域名或容器分配的域名，不带https://前缀
 
 // ==================== 配置 ====================
 const CFG = { dnPack: 32 * 1024, upPack: 20 * 1024, dnMs: 1 };
